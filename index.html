@@ -10,17 +10,41 @@
       font-family: 'Segoe UI', sans-serif;
       background: url('backgroundpic1.png') no-repeat center center fixed;
       background-size: cover;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
+      padding-top: 60px; /* offset for sticky nav */
       text-align: center;
     }
 
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background-color: rgba(0, 123, 255, 0.95);
+      padding: 12px 0;
+      display: flex;
+      justify-content: center;
+      z-index: 1000;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 20px;
+      font-weight: bold;
+      transition: opacity 0.3s;
+    }
+
+    nav a:hover {
+      opacity: 0.8;
+    }
+
     .container {
-      background: rgba(255, 255, 255, 0.85); /* translucent glassy look */
+      background: rgba(255, 255, 255, 0.85);
       padding: 40px;
       border-radius: 12px;
+      max-width: 600px;
+      margin: 0 auto;
       box-shadow: 0 8px 20px rgba(0,0,0,0.1);
     }
 
@@ -52,6 +76,15 @@
   </style>
 </head>
 <body>
+  <!-- 🌐 Top Navigation -->
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="shop.html">Shop</a>
+    <a href="tutorials.html">Tutorials</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+  <!-- 🌊 Main Container -->
   <div class="container">
     <h1>Coming Soon!</h1>
     <h2>Ocean Tech</h2>
