@@ -3,149 +3,55 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Westgate Secondary School</title>
+  <title>Ocean Tech</title>
   <style>
     body {
       margin: 0;
-      font-family: Arial, sans-serif;
-      background: #f2f2f2;
-      color: #333;
-    }
-
-    .navbar {
-      position: sticky;
-      top: 0;
-      width: 100%;
-      background: #333;
-      color: white;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #e9f5ff;
       display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 12px 20px;
-      z-index: 1000;
-    }
-
-    .navbar .logo {
-      font-size: 1.2em;
-      font-weight: bold;
-    }
-
-    .navbar .nav-links a {
-      color: white;
-      text-decoration: none;
-      margin-left: 15px;
-      font-size: 0.95em;
-    }
-
-    .navbar .nav-links a:hover {
-      text-decoration: underline;
-    }
-
-    .hero {
-      background: url('v2.png') center/cover no-repeat;
-      height: 100vh;
-      display: flex;
-      flex-direction: column;
       justify-content: center;
       align-items: center;
+      height: 100vh;
       text-align: center;
-      color: white;
     }
-
-    .hero h1 { font-size: 3em; margin: 0.2em 0; }
-    .hero h2 { font-size: 2em; margin: 0.2em 0; }
-
-    .buttons {
-      margin-top: 20px;
-    }
-
-    .buttons a {
-      display: inline-block;
-      margin: 0 10px;
-      padding: 10px 20px;
-      background: #0078D7;
-      color: white;
-      text-decoration: none;
-      border-radius: 5px;
-    }
-
-    .buttons a:hover {
-      background: #005a9e;
-    }
-
-    .carousel {
-      max-width: 800px;
-      margin: 30px auto;
-      overflow: hidden;
-    }
-
-    .carousel img {
-      width: 100%;
-      display: none;
-    }
-
-    .carousel img.active {
-      display: block;
-    }
-
-    .coming-soon {
-      max-width: 600px;
-      margin: 40px auto;
-      padding: 20px;
+    .container {
       background: white;
-      border-radius: 8px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      padding: 40px;
+      border-radius: 12px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    }
+    h1 {
+      color: #0077cc;
+      margin-bottom: 0.5em;
+    }
+    p {
+      color: #333;
+      font-size: 1.1em;
+      margin-bottom: 2em;
+    }
+    .button {
+      text-decoration: none;
+      color: white;
+      background-color: #007bff;
+      padding: 12px 24px;
+      margin: 0 10px;
+      border-radius: 6px;
+      transition: background-color 0.3s ease;
+      display: inline-block;
+    }
+    .button:hover {
+      background-color: #0056b3;
     }
   </style>
 </head>
 <body>
-
-  <div class="navbar">
-    <div class="logo">Westgate Secondary</div>
-    <div class="nav-links">
-      <a href="index.html">Home</a>
-      <a href="staff.html">Staff</a>
-      <a href="#">Student Portal</a>
-      <a href="#">Resources</a>
-      <a href="#">Contact</a>
-    </div>
-  </div>
-
-  <div class="hero">
+  <div class="container">
     <h1>Coming Soon!</h1>
-    <h2>Westgate Secondary School</h2>
+    <h2>Ocean Tech</h2>
     <p>Giving the Roblox community a safe space to learn</p>
-    <div class="buttons">
-      <a href="YOUR_ROBLOX_GROUP_LINK" target="_blank">Roblox Group</a>
-      <a href="https://discord.gg/HnTyrFGcTR" target="_blank">Discord Server</a>
-    </div>
+    <a href="https://www.roblox.com/groups/your-group-id" class="button">Roblox Group</a>
+    <a href="https://discord.gg/your-invite" class="button">Discord Server</a>
   </div>
-
-  <div class="carousel">
-    <img src="image1.jpg" class="active" alt="School Image 1">
-    <img src="image2.jpg" alt="School Image 2">
-    <img src="image3.jpg" alt="School Image 3">
-  </div>
-
-  <div class="coming-soon">
-    <h3>Shortly Coming Will Be:</h3>
-    <ul>
-      <li>Staffing Portal</li>
-      <li>Student Portal</li>
-      <li>School Info</li>
-      <li>Student and Staff Resources</li>
-    </ul>
-  </div>
-
-  <script>
-    const images = document.querySelectorAll('.carousel img');
-    let current = 0;
-    setInterval(() => {
-      images[current].classList.remove('active');
-      current = (current + 1) % images.length;
-      images[current].classList.add('active');
-    }, 3000);
-  </script>
-
 </body>
 </html>
